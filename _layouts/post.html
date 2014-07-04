@@ -7,36 +7,6 @@ layout: default
     <h1>{{ page.title }}</h1>
     <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
-
-  <section id="main">
-    <article class="post-content">
-    {{ content }}
-    </article>
-
-    <section id="home-about-me">
-        <div class="header">
-            <span class='title'>about me</span>
-            <a href="/about/"><img src='/images/Right.png' /></a>
-        </div>
-
-        <div class="louis">
-            <div class="left-half-text">
-                This is me, Louis Salin. I'm a software developer in Austin, Texas.
-            </div>
-
-            <div class="pic">
-                <img src="/images/me.jpg" />
-            </div>
-        </div>
-
-        <div class="work">
-            <img src='/images/Oracle-logo.png' />
-            <div class='text'>
-                <span>Principal software developer</span>
-                <span>Cloud Social Platform</span>
-            </div>
-        </div>
-    </section>
-  </section>
-
+  
+  {% include post_content.html %}
 </div>

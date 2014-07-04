@@ -3,13 +3,17 @@ layout: default
 ---
 
 <div class="home">
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+   {% assign post = site.posts.first %}
+   {% assign content = post.content %}
+
+    <div class="post">
+
+      <header class="post-header">
+        <h1>{{ post.title }}</h1>
+        <p class="meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}</p>
+      </header>
+
+      {% include post_content.html %}
+    </div>
 </div>
 
