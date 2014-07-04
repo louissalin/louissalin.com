@@ -1,90 +1,15 @@
-<!DOCTYPE HTML>
+---
+layout: default
+---
 
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="author" content="Louis Salin" />
-        <title>The Emotional Programmer</title>
-        <link rel="stylesheet" href="/stylesheets/main.css" />
-        <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Atom feed">
-        <link href='http://fonts.googleapis.com/css?family=Neuton|Cantarell' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-        <div>
-            <header>
-            <h1>The Emotional <span style='color: #A63E00'>Programmer</span></h1>
-            <ul>
-                <li><a href="https://plus.google.com/102335378643589505728" rel='me'><img src="/images/google.png"/></a></li>
-                <li><a href="https://www.linkedin.com/in/louissalin" rel='me'><img src="/images/Linkedin.jpg"/></a></li>
-                <li><a href="https://twitter.com/lonestardev" rel='me'><img src="/images/Twitter.jpg"/></a></li>
-                <li><a href="http://feeds.feedburner.com/TheEmotionalProgrammer" rel="me" type="application/rss+xml"><img src="/images/RSS.png"/></a></li>
-            </ul>
-            </header>
+<div class="home">
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
 
-            <nav>
-            <ul>
-                <li class="home"><a href="/index.html"><img src="/images/home-icon.png"></a></li>
-                <li><a href="/about.html">about</a></li>
-                <li><a href="/archives.html">archives</a></li>
-            </ul>
-            </nav>
-            <section id="main">
-                <article>
-    <div class="content">
-        
-        
-
-        <div id="post">
-            <div>
-                <div class="title-block">journal</div>
-                <a href="/2014/02/06/entry.html"><title>February 6, 2014</title></a>
-            </div>
-            <div class='posted-on'>posted on February  6, 2014</div>
-            <ul>
-	<li>Sleep: Good. 11:00pm to 8:30am. I did wake up often during the later part of the night.</li>
-	<li>Breakfast: 2 pieces of bacon</li>
-	<li>Lunch: the innards of 3 tacos. This time, it was a mix of potatos, eggs, avocado, spinach, cheese, tomatoes, mushrooms</li>
-	<li>Snacks: walnuts and a few cashews. Because the inside of three tacos isn&#8217;t all that much.</li>
-	<li>Dinner: 2 Italian sausages, green beans, tiny potatoes</li>
-	<li>Alcohol: a ounce of Tequila</li>
-</ul>
-<p>Rock climbing, you poop me. <br />
-My fingers are jello.</p>
-<p>I made some friends at the gym.</p>
-        </div>
-    </div>
-</article>
-
-<section id="home-about-me">
-    <div class="header">
-        <span class='title'>about me</span>
-        <a href="/about.html"><img src='/images/Right.png' /></a>
-    </div>
-
-    <div class="louis">
-        <div class="left-half-text">
-            This is me, Louis Salin. I'm a software developer in Austin, Texas.
-        </div>
-
-        <div class="pic">
-            <img src="/images/me.jpg" />
-        </div>
-    </div>
-
-    <div class="work">
-        <img src='/images/Oracle-logo.png' />
-        <div class='text'>
-            <span>Principal software developer</span>
-            <span>Cloud Social Platform</span>
-        </div>
-    </div>
-</section>
-
-
-            </section>
-            <footer>
-
-            </footer>
-        </div>
-    </body>
-</html>
